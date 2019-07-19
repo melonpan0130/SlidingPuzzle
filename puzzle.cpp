@@ -199,7 +199,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		{
 			if (wParam == VK_RIGHT) 
 			{
-				if (s_CursorX <= 4)
+				if (s_CursorX <= 3)
 				{
 					HWND hwnd = s_hwnd[s_CursorY][s_CursorX + 1];
 					MoveWindow(hwnd, s_nXPos[s_CursorY][s_CursorX]
@@ -225,7 +225,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			}
 			else if (wParam == VK_UP)
 			{
-				if (s_CursorY + 1 >= 0)
+				if (s_CursorY >= 1)
 				{
 					HWND hwnd = s_hwnd[s_CursorY - 1][s_CursorX];
 					MoveWindow(hwnd, s_nXPos[s_CursorY][s_CursorX]
@@ -240,7 +240,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			{
 				// s_nYPos[4][3] -= 90;
 				// MoveWindow(s_hwnd[4][3], s_nXPos[4][3], s_nYPos[4][3], 80, 80, TRUE);
-				if (s_CursorY + 1 <= 5)
+				if (s_CursorY <= 3)
 				{
 					HWND hwnd = s_hwnd[s_CursorY + 1][s_CursorX];
 					MoveWindow(hwnd, s_nXPos[s_CursorY][s_CursorX]
